@@ -1,8 +1,39 @@
 <script>
+	import { onMount } from 'svelte';
 	import './TailwindStyles.svelte';
 	
 	const message = 'Learn Svelte';
+
+	let flickityReady = false;
+	let mounted = false;
+	
+	onMount(() => {
+		// The payment-form is ready.
+		mounted = true;
+		if (flickityReady) {
+			loadFlickityElements();
+		}
+	});
+
+	function flickityLoaded() {
+		// The external Flickity javascript is ready.
+		flickityReady = true;
+		if (mounted) {
+			loadFlickityElements();
+		}
+	}
+
+	function loadFlickityElements() {
+		// Time for Flickity to do its magic.
+		console.log("Init Flickity")
+	}
 </script>
+
+<svelte:head>
+<!-- JavaScript -->
+<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js" on:load={flickityLoaded}></script>
+<link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+</svelte:head>
 
 <style>
 	.App-logo {
