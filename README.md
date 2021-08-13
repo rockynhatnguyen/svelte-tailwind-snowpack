@@ -1,16 +1,5 @@
 # Svelte with TailwindCSS - Snowpack
 
-> ✨ Community template for Svelte and Tailwind.
-
-![npm](https://img.shields.io/npm/v/svelte-tailwind-snowpack?logoColor=%23cd3534&style=flat-square)
-![Twitter Follow](https://img.shields.io/twitter/follow/agneymenon?style=flat-square)
-
-Create a new project with:
-
-```bash
-npx create-snowpack-app dir-name --template svelte-tailwind-snowpack
-```
-
 Uses `svelte-preprocess`.
 
 - TailwindCSS with Autoprefixer
